@@ -1,0 +1,33 @@
+# Obsidian specific
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+.obsidian/cache
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Large files (если хранишь PDF в vault)
+*.pdf
+*.epub
+
+# Backups
+*.bak
+*.backup
+
+# Node (если используешь плагины с npm)
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
