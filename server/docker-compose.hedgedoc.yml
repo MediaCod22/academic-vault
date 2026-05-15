@@ -1,0 +1,20 @@
+services:
+  hedgedoc:
+    image: quay.io/hedgedoc/hedgedoc:latest
+    container_name: hedgedoc
+    environment:
+      - CMD_DB_URL=sqlite:///data/hedgedoc.sqlite
+      - CMD_DEFAULT_PERMISSION=editable
+      - CMD_ALLOW_ANONYMOUS=true
+      - CMD_ALLOW_FREEURL=true
+      - CMD_URL=http://213.171.9.30:3006
+      - CMD_PROTOCOL_USESSL=false
+      - CMD_URL_ADDPORT=false
+      - CMD_LOG_LEVEL=info
+      - CMD_SESSION_SECRET=academic-vault-secret-2026
+    volumes:
+      - ./data:/data
+    ports:
+      - "3006:3000"
+    restart: unless-stopped
+    user: "0:0"  # Запуск от root для записи в volume
